@@ -4,37 +4,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Css -->
+  <link rel="stylesheet" href="./css/style.css">
+
   <title>Steam</title>
 </head>
 
 <body>
   <header>
     <nav class="nav__items">
-      <a href="index.html"><img src="./icons/icon_steam.svg" alt="Steam Icon."></a>
+      <a href="index.html"><img src="./icons/icon_steam.svg" alt="Steam Icon." class="steam__icon"></a>
       <ul class="nav__links">
         <li>Loja</li>
         <li>Biblioteca</li>
         <li>Comunidade</li>
         <li>Perfil</li>
       </ul>
-      <img src="./icons/bell.svg" alt="Bell." class="icon">
-      <img src="./icons/message-circle.svg" alt="Message." class="icon">
-      <img src="./imgs/iuricode 1.png" alt="Profile Picture." class="icon profile_picture">
-      <img src="./icons/chevron-right.svg" alt="Chevron right." class="icon">
+      <div class="user__informations">
+
+        <div class="icons">
+          <img src="./icons/bell.svg" alt="Bell." class="icon">
+          <img src="./icons/message-circle.svg" alt="Message." class="icon">
+        </div>
+
+        <div class="profile">
+          <img src="./imgs/iuricode 1.png" alt="Profile Picture." class="profile_picture">
+          <img src="./icons/chevron-right.svg" alt="Chevron right." class="icon">
+        </div>
+      </div>
     </nav>
     <article class="banner">
-      <img src="./imgs/logos/reddead.png" alt="Red Dead Redemption 2." class="banner__logo">
-      <p class="banner__description">Estados Unidos, 1899. O fim da era do velho oeste começou, e as autoridades estão
-        caçando as últimas gangues de
-        fora da lei que restam. Os que não se rendem, nem sucumbem, são mortos.</p>
-      <button class="button">compre agora</button>
+      <div class="content">
+        <img src="./imgs/logos/reddead.png" alt="Red Dead Redemption 2." class="banner__logo">
+        <p class="banner__description">Estados Unidos, 1899. O fim da era do velho oeste começou, e as autoridades estão
+          caçando as últimas gangues de
+          fora da lei que restam. Os que não se rendem, nem sucumbem, são mortos.</p>
+        <button class="button">compre agora</button>
+      </div>
     </article>
   </header>
 
   <main>
     <section>
       <ul class="list__pages">
-        <li class="page__on">Novidades e tendências</li>
+        <li>Novidades e tendências</li>
         <li>categorias</li>
         <li>loja de pontos</li>
         <li>notícias</li>
@@ -65,7 +83,8 @@
 
       <article>
         <img src="./imgs/logos/minecraft 1.png" alt="Minecraft." class="catalog__logo">
-        <img src="./imgs/cover/minecraft.jpg" alt="Characters running away from a boss." class="catalog__background">
+        <img src="./imgs/cover/minecraftcover.jpg" alt="Characters running away from a boss."
+          class="catalog__background">
       </article>
 
     </section>
@@ -191,7 +210,7 @@
   </main>
 
   <footer>
-    <img src="./icons/icon_steam.svg" alt="Icon Steam">
+    <img src="./icons/icon_steam.svg" alt="Icon Steam" class="steam__icon">
   </footer>
 </body>
 

@@ -1,0 +1,17 @@
+main {
+  background-color: $dark-10;
+  color: #fff;
+
+  .list__pages {
+    display: flex;
+    width: 120rem;
+    justify-content: center;
+    border-radius: 4px;
+
+    padding: 2.5rem;
+    gap: 10.2rem;
+    margin: auto auto;
+
+    background-color: $dark-20;
+  }
+}

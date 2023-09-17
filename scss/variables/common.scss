@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  list-style: none;
+}
+
+html {
+  /* a cada 1rem será considera 10px */
+  font-size: 62.5%;
+}
+
+p {
+  color: #fff;
+  font-size: 20px;
+  line-height: 170%;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  font-size: 18px;
+}
+
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.steam__icon,
+.profile_picture {
+  width: 4rem;
+  height: 4rem;
+}
+
+.button {
+  background-color: $brand-color-blue;
+  border: none;
+  padding: 1.6rem 4.6rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}

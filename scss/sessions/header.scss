@@ -1,0 +1,59 @@
+nav {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 0.8rem 4rem;
+
+  background-color: $dark-20;
+
+  .nav__links {
+    display: flex;
+
+    color: #fff;
+
+    gap: 2.9rem;
+    margin-left: 8rem;
+
+    text-transform: uppercase;
+
+    li:hover {
+      cursor: pointer;
+      color: $brand-color-blue;
+    }
+  }
+  .user__informations {
+    display: flex;
+    align-items: center;
+    gap: 2.9rem;
+    margin: auto;
+  }
+
+  .profile__picture {
+    margin-left: 2.9rem;
+  }
+}
+
+.banner {
+  max-width: 100%;
+  height: 50vh;
+  background-image: url(../../imgs/banner/bannerRedDead.jpg);
+  background-repeat: no-repeat;
+  box-shadow: inset -195rem 0px 5rem rgba(0, 0, 0, 0.709);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .content {
+    width: 50rem;
+    padding: 8rem 35rem;
+
+    .banner__logo {
+      width: 22rem;
+    }
+
+    .banner__description {
+      margin: 3.2rem 0;
+    }
+  }
+}
