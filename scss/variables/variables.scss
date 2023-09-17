@@ -32,27 +32,3 @@ $gap-72: 72px;
 $gap-80: 80px;
 $gap-88: 88px;
 $gap-96: 96px;
-
-@mixin responsive-desktop {
-  @media screen and (max-width: 1216px) {
-    @content;
-  }
-}
-
-@mixin responsive-tablet {
-  @media screen and (max-width: 1000px) {
-    @content;
-  }
-}
-
-@mixin responsive-mobile {
-  @media screen and (max-width: 488px) {
-    @content;
-  }
-}
-
-@mixin grid-layout() {
-  max-width: 1216px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
