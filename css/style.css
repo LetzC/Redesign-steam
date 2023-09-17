@@ -2,9 +2,10 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Inter", sans-serif;
   list-style: none;
-  box-sizing: border-box;
+  text-decoration: none;
 }
 * input[type=search]::-webkit-search-decoration,
 * input[type=search]::-webkit-search-cancel-button,
@@ -16,6 +17,13 @@
 html {
   /* a cada 1rem será considera 10px */
   font-size: 62.5%;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
 }
 
 p {
@@ -50,6 +58,8 @@ li {
   color: #fff;
   text-transform: uppercase;
   font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 4px;
 }
 
 li:hover,
@@ -142,6 +152,15 @@ main .search input:focus {
 }
 main .search input:focus::placeholder {
   color: #aaaaaa;
+}
+main .ul__sessions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+}
+main .ul__sessions a {
+  width: 48rem;
+  padding: 2rem 7rem;
 }
 
 .initial__catalog {

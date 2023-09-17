@@ -43,4 +43,14 @@ main {
       }
     }
   }
+  .ul__sessions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+
+    a {
+      width: 48rem;
+      padding: 2rem 7rem;
+    }
+  }
 }

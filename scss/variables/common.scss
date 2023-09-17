@@ -1,9 +1,11 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+
   font-family: "Inter", sans-serif;
   list-style: none;
-  box-sizing: border-box;
+  text-decoration: none;
 
   // Input x none
   input[type="search"]::-webkit-search-decoration,
@@ -17,6 +19,13 @@
 html {
   /* a cada 1rem será considera 10px */
   font-size: 62.5%;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
 }
 
 p {
@@ -51,6 +60,8 @@ li {
   color: #fff;
   text-transform: uppercase;
   font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 4px;
 }
 
 li:hover,
