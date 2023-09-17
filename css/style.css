@@ -1,17 +1,181 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @import "./variables/colors.scss";
- *   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   scss\style.scss 1:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \"./variables/colors.scss\";\d\a   \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\style.scss 1:9  root stylesheet";
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  list-style: none;
+  box-sizing: border-box;
 }
+* input[type=search]::-webkit-search-decoration,
+* input[type=search]::-webkit-search-cancel-button,
+* input[type=search]::-webkit-search-results-button,
+* input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+html {
+  /* a cada 1rem será considera 10px */
+  font-size: 62.5%;
+}
+
+p {
+  color: #fff;
+  font-size: 20px;
+  line-height: 170%;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  font-size: 18px;
+}
+
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.steam__icon,
+.profile_picture {
+  width: 4rem;
+  height: 4rem;
+}
+
+.button {
+  background-color: #0094ff;
+  border: none;
+  padding: 1.6rem 4.6rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+li:hover,
+a:hover {
+  cursor: pointer;
+  color: #0094ff;
+  border-bottom: 3px solid #0094ff;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 0.8rem 4rem;
+  background-color: #1b2838;
+}
+nav .nav__links {
+  display: flex;
+  color: #fff;
+  gap: 2.9rem;
+  margin-left: 8rem;
+  text-transform: uppercase;
+}
+nav .user__informations {
+  display: flex;
+  align-items: center;
+  gap: 2.9rem;
+  margin: auto;
+}
+nav .profile__picture {
+  margin-left: 2.9rem;
+}
+
+.banner {
+  max-width: 100%;
+  height: 50vh;
+  background-image: url(../../imgs/banner/bannerRedDead.jpg);
+  background-repeat: no-repeat;
+  box-shadow: inset -200rem 0px 5rem rgba(0, 0, 0, 0.709);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.banner .content {
+  padding: 8rem 34rem;
+}
+.banner .content .banner__logo {
+  width: 22rem;
+}
+.banner .content .banner__description {
+  margin: 3.2rem 0;
+  width: 45%;
+}
+
+main {
+  background-color: #0e131e;
+  color: #fff;
+  padding: 10rem 34rem;
+}
+main .list__pages,
+main .search {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background-color: #1b2838;
+}
+main .list__pages {
+  padding: 2.5rem 5rem;
+}
+main .search {
+  margin-top: 4rem;
+  padding: 2rem 5rem;
+}
+main .search input {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+}
+main .search input::placeholder {
+  color: #fff;
+  text-transform: uppercase;
+}
+main .search input:focus {
+  border: none;
+  outline: none;
+}
+main .search input:focus::placeholder {
+  color: #aaaaaa;
+}
+
+.initial__catalog {
+  display: flex;
+  gap: 32px;
+  text-align: center;
+  place-content: center;
+  margin: 8rem 0;
+}
+.initial__catalog article {
+  display: inline-block;
+  width: 28rem;
+  height: 45rem;
+}
+.initial__catalog .catalog__logo {
+  position: relative;
+  z-index: 1;
+  top: 38rem;
+}
+
+.game__farcry6 {
+  background-image: url(../../imgs/cover/farcrycover.jpg);
+}
+
+.game__forza {
+  background-image: url(../../imgs/cover/forzahorizon.png);
+}
+
+.game__fifa {
+  background-image: url(../../imgs/cover/fifacover.jpg);
+}
+
+.game__minecraft {
+  background-image: url(../../imgs/cover/minecraftcover.jpg);
+}
+
+/*# sourceMappingURL=style.css.map */

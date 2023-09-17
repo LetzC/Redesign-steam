@@ -1,0 +1,33 @@
+.initial__catalog {
+  display: flex;
+  gap: $gap-32;
+  text-align: center;
+  place-content: center;
+  margin: 8rem 0;
+
+  article {
+    display: inline-block;
+    width: 28rem;
+    height: 45rem;
+  }
+  .catalog__logo {
+    position: relative;
+    z-index: 1;
+    top: 38rem;
+  }
+}
+
+.game__farcry6 {
+  background-image: url(../../imgs/cover/farcrycover.jpg);
+}
+.game__forza {
+  background-image: url(../../imgs/cover/forzahorizon.png);
+}
+
+.game__fifa {
+  background-image: url(../../imgs/cover/fifacover.jpg);
+}
+
+.game__minecraft {
+  background-image: url(../../imgs/cover/minecraftcover.jpg);
+}

@@ -1,26 +1,46 @@
 main {
   background-color: $dark-10;
   color: #fff;
-  padding: 8rem;
+  padding: 10rem 34rem;
   // display: grid;
-  // grid-template-areas:
-  //   "nav" "nav" "nav" "nav"
-  //   "search" "search" "search" "search"
-  //   "gameCover1" "gameCover2" "gameCover3" "gameCover4"
-  //   "session1" "session2" "session3" "session4"
-  //   "gameWallpaper1" "gameWallpaper2" "gameWallpaper3" "gameWallpaper4";
+  // grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+  // grid-gap: $gap-32;
 
-  .list__pages {
-    // grid-area: "nav";
+  .list__pages,
+  .search {
     display: flex;
-    width: 120rem;
-    justify-content: center;
+    justify-content: space-between;
     border-radius: 4px;
 
-    padding: 2.5rem;
-    gap: 10.2rem;
-    margin: auto auto;
+    text-transform: uppercase;
 
     background-color: $dark-20;
+  }
+  .list__pages {
+    padding: 2.5rem 5rem;
+  }
+  .search {
+    margin-top: 4rem;
+    padding: 2rem 5rem;
+
+    input {
+      border: none;
+      background-color: transparent;
+      width: 100%;
+      font-size: 18px;
+      color: #fff;
+
+      &::placeholder {
+        color: #fff;
+        text-transform: uppercase;
+      }
+      &:focus {
+        border: none;
+        outline: none;
+      }
+      &:focus::placeholder {
+        color: $dark-30;
+      }
+    }
   }
 }
