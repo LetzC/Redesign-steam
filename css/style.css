@@ -62,6 +62,19 @@ li {
   border-radius: 4px;
 }
 
+.discount {
+  background-color: #0094ff;
+  padding: 0.2rem 1rem;
+  border-radius: 4px;
+  margin: 1.6rem 1.8rem 0 0;
+}
+
+.previous_value {
+  text-decoration: line-through;
+  color: #aaaaaa;
+  margin-right: 1.2rem;
+}
+
 li:hover,
 a:hover {
   cursor: pointer;
@@ -217,16 +230,9 @@ main .ul__sessions a {
   font-weight: 500;
   text-transform: uppercase;
 }
-.session__discounts .game__overview .discount {
-  background-color: #0094ff;
-  padding: 0.2rem 1rem;
-  border-radius: 4px;
-  margin: 1.6rem 1.8rem 0 0;
-}
-.session__discounts .game__overview .previous_value {
-  text-decoration: line-through;
-  color: #aaaaaa;
-  margin-right: 1.2rem;
+
+.free__games h3 {
+  margin-top: 10rem;
 }
 
 /*# sourceMappingURL=style.css.map */
