@@ -1,8 +1,17 @@
 main {
   background-color: $dark-10;
   color: #fff;
+  padding: 8rem;
+  // display: grid;
+  // grid-template-areas:
+  //   "nav" "nav" "nav" "nav"
+  //   "search" "search" "search" "search"
+  //   "gameCover1" "gameCover2" "gameCover3" "gameCover4"
+  //   "session1" "session2" "session3" "session4"
+  //   "gameWallpaper1" "gameWallpaper2" "gameWallpaper3" "gameWallpaper4";
 
   .list__pages {
+    // grid-area: "nav";
     display: flex;
     width: 120rem;
     justify-content: center;
