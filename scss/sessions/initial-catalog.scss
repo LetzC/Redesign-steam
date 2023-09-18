@@ -22,6 +22,7 @@
     background-size: 100%;
     background-position: center;
     transition: transform 1s ease-in-out;
+    background-repeat: no-repeat;
 
     &:hover {
       transform: scale(1.2);

@@ -9,8 +9,6 @@ nav {
   .nav__links {
     display: flex;
 
-    color: #fff;
-
     gap: 2.9rem;
     margin-left: 8rem;
 
@@ -29,24 +27,14 @@ nav {
     align-items: center;
     gap: $gap-8;
   }
-  .profile__picture {
-    margin-left: 2.9rem;
-  }
   .icons {
     display: flex;
     gap: $gap-40;
-
-    .icon {
-      width: 24px;
-      height: 24px;
-    }
   }
   .icon__on {
-    display: inline-block;
-    background-color: $brand-color-blue;
+    background-color: rgba(0, 148, 255, 0.24);
     border-radius: 50%;
-    border: 0.8rem;
-    background-blend-mode: overlay;
+    padding: 0.8rem;
   }
 }
 

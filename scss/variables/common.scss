@@ -62,15 +62,10 @@ li {
   font-size: 18px;
 }
 
-.icon {
-  width: 2.4rem;
-  height: 2.4rem;
-}
-
 .steam__icon,
 .profile_picture {
-  width: 4rem;
-  height: 4rem;
+  width: 40px;
+  height: 40px;
 }
 
 .button {
@@ -79,7 +74,7 @@ li {
   padding: 1.6rem 4.6rem;
   color: #fff;
   text-transform: uppercase;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: 600;
   border-radius: 4px;
 }
@@ -109,9 +104,18 @@ li {
   background-color: $dark-20;
 }
 
-li:hover,
-a:hover {
+a {
+  color: #fff;
+}
+
+li:hover {
   cursor: pointer;
   color: $brand-color-blue;
   border-bottom: 3px solid $brand-color-blue;
+}
+
+@media (min-width: 2500px) {
+  html {
+    font-size: 80%;
+  }
 }

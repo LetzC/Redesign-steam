@@ -5,6 +5,12 @@ main {
 
   .list__pages {
     padding: 2.5rem 5rem;
+
+    // &:hover {
+    //   cursor: pointer;
+    //   color: $brand-color-blue;
+    //   border-bottom: 3px solid $brand-color-blue;
+    // }
   }
   .search {
     margin-top: 4rem;

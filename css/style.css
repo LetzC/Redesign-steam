@@ -59,15 +59,10 @@ li {
   font-size: 18px;
 }
 
-.icon {
-  width: 2.4rem;
-  height: 2.4rem;
-}
-
 .steam__icon,
 .profile_picture {
-  width: 4rem;
-  height: 4rem;
+  width: 40px;
+  height: 40px;
 }
 
 .button {
@@ -76,7 +71,7 @@ li {
   padding: 1.6rem 4.6rem;
   color: #fff;
   text-transform: uppercase;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: 600;
   border-radius: 4px;
 }
@@ -105,13 +100,21 @@ li {
   background-color: #1b2838;
 }
 
-li:hover,
-a:hover {
+a {
+  color: #fff;
+}
+
+li:hover {
   cursor: pointer;
   color: #0094ff;
   border-bottom: 3px solid #0094ff;
 }
 
+@media (min-width: 2500px) {
+  html {
+    font-size: 80%;
+  }
+}
 nav {
   display: flex;
   align-items: center;
@@ -121,7 +124,6 @@ nav {
 }
 nav .nav__links {
   display: flex;
-  color: #fff;
   gap: 2.9rem;
   margin-left: 8rem;
   text-transform: uppercase;
@@ -139,23 +141,14 @@ nav .profile {
   align-items: center;
   gap: 8px;
 }
-nav .profile__picture {
-  margin-left: 2.9rem;
-}
 nav .icons {
   display: flex;
   gap: 40px;
 }
-nav .icons .icon {
-  width: 24px;
-  height: 24px;
-}
 nav .icon__on {
-  display: inline-block;
-  background-color: #0094ff;
+  background-color: rgba(0, 148, 255, 0.24);
   border-radius: 50%;
-  border: 0.8rem;
-  background-blend-mode: overlay;
+  padding: 0.8rem;
 }
 
 .banner {
@@ -246,6 +239,7 @@ main .ul__sessions a {
   background-size: 100%;
   background-position: center;
   transition: transform 1s ease-in-out;
+  background-repeat: no-repeat;
 }
 .initial__catalog .cover__bg:hover {
   transform: scale(1.2);
