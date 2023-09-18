@@ -231,7 +231,6 @@ main .ul__sessions a {
   justify-content: space-between;
 }
 .initial__catalog article {
-  display: inline-block;
   width: 28rem;
   height: 45rem;
 }
@@ -240,25 +239,30 @@ main .ul__sessions a {
   z-index: 1;
   top: 38rem;
 }
+.initial__catalog .cover__bg {
+  background-size: cover;
+  background-position: center;
+  transition: transform 1s ease-in-out;
+}
+.initial__catalog .cover__bg :hover {
+  transform: scale(1.2);
+  transform-origin: center;
+}
 
 .game__farcry6 {
   background-image: url(../../imgs/cover/farcrycover.jpg);
-  background-size: cover;
 }
 
 .game__forza {
   background-image: url(../../imgs/cover/forzahorizon.png);
-  background-size: cover;
 }
 
 .game__fifa {
   background-image: url(../../imgs/cover/fifacover.jpg);
-  background-size: cover;
 }
 
 .game__minecraft {
   background-image: url(../../imgs/cover/minecraftcover.jpg);
-  background-size: cover;
 }
 
 .session__discounts {
