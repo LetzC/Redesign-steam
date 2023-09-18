@@ -2,20 +2,7 @@ main {
   background-color: $dark-10;
   color: #fff;
   padding: 10rem 34rem;
-  // display: grid;
-  // grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
-  // grid-gap: $gap-32;
 
-  .list__pages,
-  .search {
-    display: flex;
-    justify-content: space-between;
-    border-radius: 4px;
-
-    text-transform: uppercase;
-
-    background-color: $dark-20;
-  }
   .list__pages {
     padding: 2.5rem 5rem;
   }
@@ -47,6 +34,7 @@ main {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10rem;
+    margin-top: 6rem;
 
     a {
       width: 48rem;

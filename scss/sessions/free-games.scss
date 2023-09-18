@@ -1,21 +1,44 @@
 .free__games {
-  section {
-    display: flex;
-  }
-
   h3 {
     margin-top: 10rem;
   }
   h4 {
     text-transform: capitalize;
-    margin-top: 3.2rem;
+    margin-bottom: 1.2rem;
   }
+
+  .list__games {
+    display: flex;
+    gap: $gap-32;
+  }
+
+  .games__free {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .description_small {
+      padding: 1.5rem;
+    }
+    .title {
+      text-transform: capitalize;
+      font-size: 18px;
+      margin-right: 7rem;
+    }
+    p {
+      font-size: 14px;
+    }
+    .discount {
+      margin-right: 1.6rem;
+      margin-top: 0;
+    }
+  }
+
   .game_large,
   .offer__day {
-    display: inline-block;
     background-color: $dark-20;
+    border-radius: 4px;
   }
-  .game_large {
+  .description_large {
     padding: 3.2rem;
   }
   .offer_period {

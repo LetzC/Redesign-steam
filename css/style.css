@@ -13,6 +13,17 @@
 * input[type=search]::-webkit-search-results-decoration {
   display: none;
 }
+* ::-webkit-scrollbar-track {
+  background-color: #1b2838;
+}
+* ::-webkit-scrollbar {
+  width: 6px;
+  background: #1b2838;
+}
+* ::-webkit-scrollbar-thumb {
+  background: #007cd6;
+  border-radius: 5px;
+}
 
 html {
   /* a cada 1rem será considera 10px */
@@ -179,6 +190,7 @@ main .ul__sessions {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10rem;
+  margin-top: 6rem;
 }
 main .ul__sessions a {
   width: 48rem;
@@ -191,6 +203,7 @@ main .ul__sessions a {
   text-align: center;
   place-content: center;
   margin: 8rem 0;
+  justify-content: space-between;
 }
 .initial__catalog article {
   display: inline-block;
@@ -235,22 +248,43 @@ main .ul__sessions a {
   text-transform: uppercase;
 }
 
-.free__games section {
-  display: flex;
-}
 .free__games h3 {
   margin-top: 10rem;
 }
 .free__games h4 {
   text-transform: capitalize;
-  margin-top: 3.2rem;
+  margin-bottom: 1.2rem;
+}
+.free__games .list__games {
+  display: flex;
+  gap: 32px;
+}
+.free__games .games__free {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.free__games .games__free .description_small {
+  padding: 1.5rem;
+}
+.free__games .games__free .title {
+  text-transform: capitalize;
+  font-size: 18px;
+  margin-right: 7rem;
+}
+.free__games .games__free p {
+  font-size: 14px;
+}
+.free__games .games__free .discount {
+  margin-right: 1.6rem;
+  margin-top: 0;
 }
 .free__games .game_large,
 .free__games .offer__day {
-  display: inline-block;
   background-color: #1b2838;
+  border-radius: 4px;
 }
-.free__games .game_large {
+.free__games .description_large {
   padding: 3.2rem;
 }
 .free__games .offer_period {
@@ -271,6 +305,31 @@ main .ul__sessions a {
   font-size: 18px;
   display: inline-block;
   text-transform: uppercase;
+}
+
+.more__recommendations {
+  text-align: center;
+  margin-top: 10rem;
+}
+.more__recommendations h2 {
+  font-size: 26px;
+  font-weight: 500;
+  color: #0094ff;
+  margin-bottom: 1.6rem;
+}
+.more__recommendations img {
+  background-color: #1b2838;
+  margin-top: 4.8rem;
+  border-radius: 50%;
+  padding: 0.8rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b2838;
+  height: 80px;
 }
 
 /*# sourceMappingURL=style.css.map */
