@@ -19,12 +19,34 @@ nav {
   .user__informations {
     display: flex;
     align-items: center;
-    gap: 2.9rem;
-    margin: auto;
+    justify-content: flex-end;
+    gap: $gap-64;
+    width: 100%;
+    height: 100%;
   }
-
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: $gap-8;
+  }
   .profile__picture {
     margin-left: 2.9rem;
+  }
+  .icons {
+    display: flex;
+    gap: $gap-40;
+
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .icon__on {
+    display: inline-block;
+    background-color: $brand-color-blue;
+    border-radius: 50%;
+    border: 0.8rem;
+    background-blend-mode: overlay;
   }
 }
 
@@ -41,7 +63,7 @@ nav {
   justify-content: center;
 
   .content {
-    padding: 8rem 34rem;
+    padding: 8% 18%;
 
     .banner__logo {
       width: 22rem;
@@ -49,7 +71,7 @@ nav {
 
     .banner__description {
       margin: 3.2rem 0;
-      width: 45%;
+      width: 50rem;
     }
   }
 }
