@@ -100,21 +100,41 @@ li {
   background-color: #1b2838;
 }
 
+.zoom__bg {
+  background-size: cover;
+  background-position: center;
+  transition: transform 1s ease-in-out;
+  background-repeat: no-repeat;
+}
+.zoom__bg:hover {
+  transform: scale(1.2);
+}
+
 a {
   color: #fff;
 }
 
-li:hover {
-  cursor: pointer;
-  color: #0094ff;
-  border-bottom: 3px solid #0094ff;
+a:not(.button)::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: #0094ff;
+  display: block;
+  position: relative;
+  top: 2.7rem;
+  opacity: 0;
+  transition: all 0.3s;
+  pointer-events: none;
 }
 
-@media (min-width: 2500px) {
-  html {
-    font-size: 80%;
-  }
+a:not(.button):hover::after {
+  opacity: 1;
 }
+
+a:not(.button):hover {
+  color: #0094ff;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -127,6 +147,7 @@ nav .nav__links {
   gap: 2.9rem;
   margin-left: 8rem;
   text-transform: uppercase;
+  position: relative;
 }
 nav .user__informations {
   display: flex;
@@ -179,7 +200,8 @@ main {
   padding: 10rem 18%;
 }
 main .list__pages {
-  padding: 2.5rem 5rem;
+  padding: 2.8rem 5rem;
+  height: 80px;
 }
 main .search {
   margin-top: 4rem;
@@ -236,13 +258,6 @@ main .ul__sessions a {
 .initial__catalog .cover__bg {
   width: 100%;
   height: 100%;
-  background-size: 100%;
-  background-position: center;
-  transition: transform 1s ease-in-out;
-  background-repeat: no-repeat;
-}
-.initial__catalog .cover__bg:hover {
-  transform: scale(1.2);
 }
 
 .game__farcry6 {
@@ -312,6 +327,11 @@ main .ul__sessions a {
 .free__games .offer__day {
   background-color: #1b2838;
   border-radius: 4px;
+  overflow: hidden;
+}
+.free__games .game_large {
+  width: 40rem;
+  height: 46.6rem;
 }
 .free__games .description_large {
   padding: 3.2rem;
@@ -334,6 +354,19 @@ main .ul__sessions a {
   font-size: 18px;
   display: inline-block;
   text-transform: uppercase;
+}
+.free__games .large__bg {
+  width: 100%;
+  height: 60%;
+  background-position: center;
+}
+
+.stardew__valley {
+  background-image: url(../../imgs/cover/stardew.png);
+}
+
+.hogwarts__legacy {
+  background-image: url(../../imgs/cover/hogwarts.png);
 }
 
 .more__recommendations {

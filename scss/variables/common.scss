@@ -104,18 +104,37 @@ li {
   background-color: $dark-20;
 }
 
+.zoom__bg {
+  background-size: cover;
+  background-position: center;
+  transition: transform 1s ease-in-out;
+  background-repeat: no-repeat;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
 a {
   color: #fff;
 }
 
-li:hover {
-  cursor: pointer;
-  color: $brand-color-blue;
-  border-bottom: 3px solid $brand-color-blue;
+a:not(.button)::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: $brand-color-blue;
+  display: block;
+  position: relative;
+  top: 2.7rem;
+  opacity: 0;
+  transition: all 0.3s;
+  pointer-events: none;
 }
 
-@media (min-width: 2500px) {
-  html {
-    font-size: 80%;
-  }
+a:not(.button):hover::after {
+  opacity: 1;
+}
+
+a:not(.button):hover {
+  color: $brand-color-blue;
 }
