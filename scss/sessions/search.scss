@@ -1,0 +1,28 @@
+.search {
+  margin-top: 4rem;
+  padding: 2rem 5rem;
+
+  img {
+    cursor: pointer;
+  }
+
+  input {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+
+    &::placeholder {
+      color: #fff;
+      text-transform: uppercase;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+    }
+    &:focus::placeholder {
+      color: $dark-30;
+    }
+  }
+}

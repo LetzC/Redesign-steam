@@ -103,11 +103,11 @@ li {
 .zoom__bg {
   background-size: cover;
   background-position: center;
-  transition: transform 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   background-repeat: no-repeat;
 }
 .zoom__bg:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 a {
@@ -203,28 +203,6 @@ main .list__pages {
   padding: 2.8rem 5rem;
   height: 80px;
 }
-main .search {
-  margin-top: 4rem;
-  padding: 2rem 5rem;
-}
-main .search input {
-  border: none;
-  background-color: transparent;
-  width: 100%;
-  font-size: 18px;
-  color: #fff;
-}
-main .search input::placeholder {
-  color: #fff;
-  text-transform: uppercase;
-}
-main .search input:focus {
-  border: none;
-  outline: none;
-}
-main .search input:focus::placeholder {
-  color: #aaaaaa;
-}
 main .ul__sessions {
   display: flex;
   justify-content: space-between;
@@ -235,6 +213,32 @@ main .ul__sessions {
 main .ul__sessions a {
   width: 48rem;
   padding: 2rem 7rem;
+}
+
+.search {
+  margin-top: 4rem;
+  padding: 2rem 5rem;
+}
+.search img {
+  cursor: pointer;
+}
+.search input {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+}
+.search input::placeholder {
+  color: #fff;
+  text-transform: uppercase;
+}
+.search input:focus {
+  border: none;
+  outline: none;
+}
+.search input:focus::placeholder {
+  color: #aaaaaa;
 }
 
 .initial__catalog {
@@ -299,43 +303,6 @@ main .ul__sessions a {
   text-transform: capitalize;
   margin-bottom: 1.2rem;
 }
-.free__games .list__games {
-  display: flex;
-  gap: 32px;
-}
-.free__games .games__free {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.free__games .games__free .description_small {
-  padding: 1.5rem;
-}
-.free__games .games__free .title {
-  text-transform: capitalize;
-  font-size: 18px;
-  margin-right: 7rem;
-}
-.free__games .games__free p {
-  font-size: 14px;
-}
-.free__games .games__free .discount {
-  margin-right: 1.6rem;
-  margin-top: 0;
-}
-.free__games .game_large,
-.free__games .offer__day {
-  background-color: #1b2838;
-  border-radius: 4px;
-  overflow: hidden;
-}
-.free__games .game_large {
-  width: 40rem;
-  height: 46.6rem;
-}
-.free__games .description_large {
-  padding: 3.2rem;
-}
 .free__games .offer_period {
   font-size: 16px;
   color: #aaaaaa;
@@ -355,7 +322,58 @@ main .ul__sessions a {
   display: inline-block;
   text-transform: uppercase;
 }
-.free__games .large__bg {
+.free__games .list__games {
+  display: flex;
+  gap: 32px;
+}
+.free__games .list__games .description_small,
+.free__games .list__games .description_large {
+  background-color: #1b2838;
+  position: relative;
+  z-index: 2;
+}
+.free__games .list__games .game_large,
+.free__games .list__games .offer__day {
+  border-radius: 4px;
+  overflow: hidden;
+}
+.free__games .games__free {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.free__games .games__free .offer__day {
+  width: 100%;
+  height: 21.7rem;
+}
+.free__games .games__free .description_small {
+  padding: 1.5rem;
+}
+.free__games .games__free .title {
+  text-transform: capitalize;
+  font-size: 18px;
+  margin-right: 7rem;
+}
+.free__games .games__free p {
+  font-size: 14px;
+}
+.free__games .games__free .discount {
+  margin-right: 1.6rem;
+  margin-top: 0;
+}
+.free__games .games__free .small__bg {
+  width: 100%;
+  height: 16rem;
+  background-position: center;
+}
+.free__games .game_large {
+  width: 40rem;
+  height: 46.6rem;
+}
+.free__games .game_large .description_large {
+  padding: 3.2rem;
+}
+.free__games .game_large .large__bg {
   width: 100%;
   height: 60%;
   background-position: center;
@@ -367,6 +385,14 @@ main .ul__sessions a {
 
 .hogwarts__legacy {
   background-image: url(../../imgs/cover/hogwarts.png);
+}
+
+.stray {
+  background-image: url(../../imgs/cover/stray.png);
+}
+
+.raft {
+  background-image: url(../../imgs/cover/raft.png);
 }
 
 .more__recommendations {
