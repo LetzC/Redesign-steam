@@ -30,6 +30,7 @@
   .list__games {
     display: flex;
     gap: $gap-32;
+    justify-content: space-between;
 
     .description_small,
     .description_large {
@@ -42,6 +43,7 @@
     .offer__day {
       border-radius: 4px;
       overflow: hidden;
+      background-color: $dark-20;
     }
   }
 

@@ -180,7 +180,6 @@ nav .icon__on {
 .banner {
   max-width: 100%;
   height: 50vh;
-  background-image: url(../../imgs/banner/bannerRedDead.jpg);
   background-repeat: no-repeat;
   box-shadow: inset -200rem 0px 5rem rgba(0, 0, 0, 0.709);
   background-size: cover;
@@ -197,6 +196,25 @@ nav .icon__on {
 .banner .content .banner__description {
   margin: 3.2rem 0;
   width: 50rem;
+}
+.banner .content .button {
+  place-self: start;
+}
+
+.banner__first {
+  background-image: url(../../imgs/banner/bannerRedDead.jpg);
+}
+
+.banner__second {
+  background-image: url(../../imgs/banner/daylight.jpg);
+}
+
+.banner__third {
+  background-image: url(../../imgs/banner/TheLastofUs2.jpg);
+}
+
+.banner__fourth {
+  background-image: url(../../imgs/banner/bannerValhalla.jpg);
 }
 
 main {
@@ -290,10 +308,6 @@ main .ul__sessions a {
   flex-wrap: wrap;
   gap: 32px;
 }
-.session__discounts .game__overview {
-  width: 28rem;
-  height: auto;
-}
 .session__discounts .game__overview p {
   display: inline-block;
   font-size: 14px;
@@ -330,6 +344,7 @@ main .ul__sessions a {
 .free__games .list__games {
   display: flex;
   gap: 32px;
+  justify-content: space-between;
 }
 .free__games .list__games .description_small,
 .free__games .list__games .description_large {
@@ -341,6 +356,7 @@ main .ul__sessions a {
 .free__games .list__games .offer__day {
   border-radius: 4px;
   overflow: hidden;
+  background-color: #1b2838;
 }
 .free__games .games__free {
   display: flex;
@@ -423,6 +439,15 @@ footer {
   align-items: center;
   background-color: #1b2838;
   height: 80px;
+}
+
+@media screen and (min-width: 2500px) {
+  html {
+    font-size: 80%;
+  }
+  main {
+    padding: 10rem 20%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
