@@ -2,10 +2,16 @@
   display: flex;
   flex-wrap: wrap;
   gap: $gap-32;
+  overflow: hidden;
 
   .game__overview {
-    // width: 28rem;
-    // height: auto;
+    width: 28rem;
+    height: auto;
+    overflow: hidden;
+
+    .zoom__bg {
+      height: 15rem;
+    }
 
     p {
       display: inline-block;
@@ -14,4 +20,36 @@
       text-transform: uppercase;
     }
   }
+}
+
+.gameOv__assassinCreedVa {
+  background-image: url("../../imgs/cover/assassins-creed-valhalla\ 1.jpg");
+}
+
+.gameOv__grandTheftAutoV {
+  background-image: url("../../imgs/cover/grandtheft.jpg");
+}
+
+.gameOv__minecraft {
+  background-image: url("../../imgs/cover/minecraft.jpg");
+}
+
+.gameOv__detroitBecome {
+  background-image: url("../../imgs/cover/detroitbecom.jpg");
+}
+
+.gameOv__fallGuys {
+  background-image: url("../../imgs/cover/fallguys.png");
+}
+
+.gameOv__godOfWar {
+  background-image: url("../../imgs/cover/god-of-war\ 1.png");
+}
+
+.gameOv__cyberpunk2077 {
+  background-image: url("../../imgs/cover/cyberpunk.png");
+}
+
+.gameOv__ghostwire {
+  background-image: url("../../imgs/cover/GhostWire-Tokyo\ 1.png");
 }
