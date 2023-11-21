@@ -1,12 +1,16 @@
 main {
-  background-color: $dark-10;
+  max-width: 1216px;
+  margin: 11rem auto;
+  padding: 0 20px;
+
   color: #fff;
   padding: 10rem 18%;
 
   .list__pages {
     padding: 2.8rem 5rem;
+    gap: $gap-16;
 
-    height: 80px;
+    height: 100%;
   }
 
   .ul__sessions {
