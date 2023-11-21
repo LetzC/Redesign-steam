@@ -1,9 +1,9 @@
 .initial__catalog {
   display: flex;
-  gap: $gap-32;
+  gap: $gap-16;
+  justify-content: center;
   text-align: center;
   margin: 8rem 0;
-  justify-content: space-between;
   flex-wrap: wrap;
 
   article {
