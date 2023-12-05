@@ -1,11 +1,12 @@
 .session__discounts {
   display: flex;
-  flex-wrap: wrap;
+  column-gap: $gap-16;
   row-gap: $gap-32;
-  justify-content: space-between;
+  flex-wrap: wrap;
   overflow: hidden;
 
   .game__overview {
+    flex-grow: 1;
     width: 28rem;
     height: auto;
     overflow: hidden;

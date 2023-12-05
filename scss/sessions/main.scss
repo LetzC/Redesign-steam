@@ -21,7 +21,13 @@ main {
     margin-top: 6rem;
     flex-wrap: wrap;
 
-    a {
+    li {
+      display: flex;
+      flex-grow: 1;
+    }
+
+    li a {
+      flex-grow: 1;
       padding: 2rem 7rem;
     }
   }
