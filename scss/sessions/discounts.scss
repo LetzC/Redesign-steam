@@ -1,7 +1,7 @@
 .session__discounts {
   display: flex;
   flex-wrap: wrap;
-  gap: $gap-32;
+  row-gap: $gap-32;
   justify-content: space-between;
   overflow: hidden;
 
