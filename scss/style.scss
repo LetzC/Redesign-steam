@@ -1,26 +1,33 @@
-@import "./variables/variables.scss";
-
-@import "./variables/common.scss";
-
-@import "./sessions/header.scss";
-
-@import "./sessions/main.scss";
-
-@import "./sessions/search.scss";
-
-@import "./sessions/initial-catalog.scss";
-
-@import "./sessions/discounts.scss";
-
-@import "./sessions/free-games.scss";
-
-@import "./sessions/footer.scss";
+@import "./variables/variables.scss", "./variables/common.scss",
+  "./sessions/header.scss", "./sessions/main.scss", "./sessions/search.scss",
+  "./sessions/initial-catalog.scss", "./sessions/discounts.scss",
+  "./sessions/free-games.scss", "./sessions/footer.scss";
 
 @media screen and (min-width: 2500px) {
   html {
     font-size: 80%;
   }
+  // main {
+  //   padding: 10rem 20%;
+  // }
+}
+
+@media screen and (max-width: 1375px) {
   main {
-    padding: 10rem 20%;
+    .list__pages {
+      flex-direction: column;
+      place-items: center;
+
+      li a::after {
+        content: "";
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .initial__catalog {
+    flex-wrap: wrap;
   }
 }
