@@ -30,4 +30,13 @@
   .initial__catalog {
     flex-wrap: wrap;
   }
+
+  .list__games {
+    flex-wrap: wrap;
+
+    .game_large,
+    .games__free {
+      flex-grow: 1;
+    }
+  }
 }
