@@ -7,9 +7,9 @@
   html {
     font-size: 80%;
   }
-  // main {
-  //   padding: 10rem 20%;
-  // }
+  main {
+    max-width: 1506px;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -35,6 +35,18 @@
       .games__free {
         flex-grow: 1;
       }
+    }
+
+    .small__bg {
+      position: relative;
+      height: 26rem !important;
+      background-position: top !important;
+    }
+  }
+
+  .banner {
+    .content {
+      width: auto;
     }
   }
 }
@@ -64,6 +76,26 @@
       top: 7.5rem;
       right: 0;
       justify-content: flex-end;
+    }
+  }
+}
+
+@media screen and (max-width: 528px) {
+  html {
+    font-size: 50%;
+  }
+
+  p,
+  li,
+  .button {
+    font-size: 14px;
+  }
+
+  .banner {
+    .content {
+      .banner__description {
+        width: auto;
+      }
     }
   }
 }
