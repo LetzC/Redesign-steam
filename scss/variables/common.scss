@@ -68,8 +68,13 @@ li {
 
 .steam__icon,
 .profile_picture {
-  width: 40px;
-  height: 40px;
+  width: 4rem;
+  min-width: 4rem;
+  min-height: 4rem;
+}
+.steam__icon::after {
+  content: "";
+  border: none;
 }
 
 .button {
@@ -147,4 +152,17 @@ a:not(.button):hover::after {
 
 a:not(.button):hover {
   color: $brand-color-blue;
+}
+
+.nav__mobile {
+  display: none;
+}
+
+.menu__burger {
+  width: 3.4rem;
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
 }

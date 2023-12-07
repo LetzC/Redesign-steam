@@ -12,7 +12,7 @@
   // }
 }
 
-@media screen and (max-width: 1375px) {
+@media screen and (max-width: 1365px) {
   main {
     .list__pages {
       flex-direction: column;
@@ -23,20 +23,47 @@
         background-color: transparent;
       }
     }
+
+    .initial__catalog {
+      flex-wrap: wrap;
+    }
+
+    .list__games {
+      flex-wrap: wrap;
+
+      .game_large,
+      .games__free {
+        flex-grow: 1;
+      }
+    }
   }
 }
 
-@media screen and (max-width: 1023px) {
-  .initial__catalog {
-    flex-wrap: wrap;
+@media screen and (max-width: 920px) {
+  .nav__desktop {
+    display: none;
   }
+  .nav__mobile {
+    display: flex;
+    position: relative;
 
-  .list__games {
-    flex-wrap: wrap;
+    .nav__links {
+      display: none;
+    }
 
-    .game_large,
-    .games__free {
-      flex-grow: 1;
+    .nav__links.open {
+      display: flex;
+      position: absolute;
+      text-align: center;
+      flex-direction: column;
+      background-color: $dark-20;
+      border-radius: 5px;
+
+      padding: 1.5rem 3.4rem;
+
+      top: 7.5rem;
+      right: 0;
+      justify-content: flex-end;
     }
   }
 }
