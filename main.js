@@ -1,5 +1,6 @@
 const menuBurger = document.querySelector('.menu__burger')
 const navLinks = document.querySelector('.links__mobile')
+const radio = document.querySelector('.manual__btn')
 
 menuBurger.addEventListener('click', menuShow)
 
@@ -15,5 +16,20 @@ function menuShow() {
   }
 }
 
-console.log(navLinks)
-console.log(menuBurger)
+let cont = 1
+
+document.getElementById('radio1').checked = true
+
+setInterval(() => {
+  nextImg()
+}, 5000)
+
+function nextImg() {
+  cont++
+
+  if (cont > 4) {
+    cont = 1
+  }
+
+  document.getElementById(`radio${cont}`).checked = true
+}

@@ -40,20 +40,39 @@ nav {
   }
 }
 
-.banner {
-  max-width: 100%;
+.slider {
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
   height: 500px;
-  background-repeat: no-repeat;
-  box-shadow: inset -200rem 0px 5rem rgba(0, 0, 0, 0.709);
-  background-size: cover;
+}
 
+.banners {
+  width: 400%;
+  height: 500px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+  .banner {
+    width: 25%;
+    position: relative;
+    height: 500px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: inset -200rem 0px 5rem rgba(0, 0, 0, 0.709);
+
+    transition: 0.5s all;
+  }
+
+  input {
+    display: none;
+  }
 
   .content {
     width: 1216px;
-    margin: 68rem auto;
+    margin: 82px auto;
     padding: 0 20px;
 
     .banner__logo {
@@ -70,6 +89,56 @@ nav {
   }
 }
 
+.nav__manual,
+.nav__auto {
+  display: flex;
+  gap: $gap-24;
+  width: 100%;
+  position: absolute;
+  top: 612px;
+  justify-content: center;
+
+  .manual__btn,
+  div {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    width: 6.4rem;
+    height: 0.6rem;
+    cursor: pointer;
+    background-color: white;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: $brand-color-blue;
+    }
+  }
+}
+
+#radio1:checked ~ .nav__auto .auto-btn1,
+#radio2:checked ~ .nav__auto .auto-btn2,
+#radio3:checked ~ .nav__auto .auto-btn3,
+#radio4:checked ~ .nav__auto .auto-btn4 {
+  z-index: 2;
+  background-color: $brand-color-blue !important;
+}
+
+#radio1:checked ~ .banner__first {
+  margin-left: 0%;
+}
+
+#radio2:checked ~ .banner__first {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .banner__first {
+  margin-left: -50%;
+}
+
+#radio4:checked ~ .banner__first {
+  margin-left: -75%;
+}
+
 .banner__first {
   background-image: url(../../imgs/banner/bannerRedDead.jpg);
 }
@@ -84,5 +153,4 @@ nav {
 
 .banner__fourth {
   background-image: url(../../imgs/banner/bannerValhalla.jpg);
-  background-position: center;
 }

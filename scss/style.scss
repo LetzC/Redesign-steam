@@ -5,10 +5,14 @@
 
 @media screen and (min-width: 2500px) {
   html {
-    font-size: 80%;
+    font-size: 70%;
   }
   main {
     max-width: 1506px;
+  }
+
+  .banner {
+    background-position: top !important;
   }
 }
 
@@ -93,6 +97,8 @@
 
   .banner {
     .content {
+      margin: 14rem auto;
+
       .banner__description {
         width: auto;
       }
