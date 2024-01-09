@@ -4,7 +4,7 @@
 
 ## :computer: Como acessar:
 
-Para acessar o projeto [clique aqui!]()
+Para acessar o projeto [clique aqui!](https://redesign-steam-letzc.vercel.app)
 
 
 ## 🛠️ Tecnologias usadas:
