@@ -15,3 +15,9 @@ Para acessar o projeto <a href="https://redesign-steam-letzc.vercel.app" target=
 ## :bookmark: Autores:
 - Desenvolvedora: [LetzC](https://github.com/LetzC)
 - Layout Figma: [iuricode](https://github.com/iuricode)
+
+## :memo: Próximas implementações:
+Esta é a versão 1.0 da interface, nas próximas implementações terá:
+- Continuação da página inicial;
+- Opção de acessar o perfil;
+- Acesso aos detalhes dos jogos.
