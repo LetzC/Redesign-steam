@@ -33,3 +33,9 @@ function nextImg() {
 
   document.getElementById(`radio${cont}`).checked = true
 }
+
+document.querySelectorAll('a').forEach(function (anchor) {
+  anchor.addEventListener('click', function (event) {
+    event.preventDefault();
+  });
+});

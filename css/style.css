@@ -30,6 +30,10 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  background-color: #0e131e;
+}
+
 h3,
 h4 {
   font-size: 24px;
@@ -61,8 +65,14 @@ li {
 
 .steam__icon,
 .profile_picture {
-  width: 40px;
-  height: 40px;
+  width: 4rem;
+  min-width: 4rem;
+  min-height: 4rem;
+}
+
+.steam__icon::after {
+  content: "";
+  border: none;
 }
 
 .button {
@@ -140,6 +150,19 @@ a:not(.button):hover {
   color: #0094ff;
 }
 
+.nav__mobile {
+  display: none;
+}
+
+.menu__burger {
+  width: 3.4rem;
+}
+.menu__burger button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -167,38 +190,118 @@ nav .profile {
   align-items: center;
   gap: 8px;
 }
+nav .profile .status {
+  position: absolute;
+  top: 5rem;
+  right: 4rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: #6cb800;
+}
 nav .icons {
   display: flex;
-  gap: 40px;
+  gap: 32px;
 }
-nav .icon__on {
+nav .icon {
+  cursor: pointer;
   background-color: rgba(0, 148, 255, 0.24);
   border-radius: 50%;
   padding: 0.8rem;
 }
 
-.banner {
-  max-width: 100%;
-  height: 50vh;
-  background-repeat: no-repeat;
-  box-shadow: inset -200rem 0px 5rem rgba(0, 0, 0, 0.709);
-  background-size: cover;
+.slider {
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+  height: 500px;
+}
+
+.banners {
+  width: 400%;
+  height: 500px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
-.banner .content {
-  padding: 8% 18%;
+.banners .banner {
+  width: 25%;
+  position: relative;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset -200rem 0px 5rem rgba(0, 0, 0, 0.709);
+  transition: 0.5s all;
 }
-.banner .content .banner__logo {
+.banners input {
+  display: none;
+}
+.banners .content {
+  width: 1216px;
+  margin: 82px auto;
+  padding: 0 20px;
+}
+.banners .content .banner__logo {
   width: 22rem;
 }
-.banner .content .banner__description {
+.banners .content .banner__description {
   margin: 3.2rem 0;
   width: 50rem;
 }
-.banner .content .button {
+.banners .content .button {
   place-self: start;
+}
+
+.nav__manual,
+.nav__auto {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  position: absolute;
+  top: 612px;
+  justify-content: center;
+}
+.nav__manual .manual__btn,
+.nav__manual div,
+.nav__auto .manual__btn,
+.nav__auto div {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 6.4rem;
+  height: 0.6rem;
+  cursor: pointer;
+  background-color: white;
+  transition: 0.2s;
+}
+.nav__manual .manual__btn:hover,
+.nav__manual div:hover,
+.nav__auto .manual__btn:hover,
+.nav__auto div:hover {
+  background-color: #0094ff;
+}
+
+#radio1:checked ~ .nav__auto .auto-btn1,
+#radio2:checked ~ .nav__auto .auto-btn2,
+#radio3:checked ~ .nav__auto .auto-btn3,
+#radio4:checked ~ .nav__auto .auto-btn4 {
+  z-index: 2;
+  background-color: #0094ff !important;
+}
+
+#radio1:checked ~ .banner__first {
+  margin-left: 0%;
+}
+
+#radio2:checked ~ .banner__first {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .banner__first {
+  margin-left: -50%;
+}
+
+#radio4:checked ~ .banner__first {
+  margin-left: -75%;
 }
 
 .banner__first {
@@ -218,23 +321,32 @@ nav .icon__on {
 }
 
 main {
-  background-color: #0e131e;
+  max-width: 1216px;
+  margin: 11rem auto;
+  padding: 0 20px;
   color: #fff;
-  padding: 10rem 18%;
 }
 main .list__pages {
   padding: 2.8rem 5rem;
-  height: 80px;
+  gap: 16px;
+  height: 100%;
 }
 main .ul__sessions {
   display: flex;
   justify-content: space-between;
+  column-gap: 16px;
+  row-gap: 32px;
   margin-bottom: 10rem;
   margin-top: 6rem;
   flex-wrap: wrap;
 }
-main .ul__sessions a {
-  width: 48rem;
+main .ul__sessions li {
+  display: flex;
+  text-align: center;
+  flex-grow: 1;
+}
+main .ul__sessions li a {
+  flex-grow: 1;
   padding: 2rem 7rem;
 }
 
@@ -266,11 +378,10 @@ main .ul__sessions a {
 
 .initial__catalog {
   display: flex;
-  gap: 32px;
+  gap: 16px;
+  justify-content: center;
   text-align: center;
   margin: 8rem 0;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 .initial__catalog article {
   width: 28rem;
@@ -305,14 +416,57 @@ main .ul__sessions a {
 
 .session__discounts {
   display: flex;
+  column-gap: 16px;
+  row-gap: 32px;
   flex-wrap: wrap;
-  gap: 32px;
+  overflow: hidden;
+}
+.session__discounts .game__overview {
+  flex-grow: 1;
+  width: 28rem;
+  height: auto;
+  overflow: hidden;
+}
+.session__discounts .game__overview .zoom__bg {
+  height: 15rem;
 }
 .session__discounts .game__overview p {
   display: inline-block;
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
+}
+
+.gameOv__assassinCreedVa {
+  background-image: url("../../imgs/cover/assassins-creed-valhalla 1.jpg");
+}
+
+.gameOv__grandTheftAutoV {
+  background-image: url("../../imgs/cover/grandtheft.jpg");
+}
+
+.gameOv__minecraft {
+  background-image: url("../../imgs/cover/minecraft.jpg");
+}
+
+.gameOv__detroitBecome {
+  background-image: url("../../imgs/cover/detroitbecom.jpg");
+}
+
+.gameOv__fallGuys {
+  background-image: url("../../imgs/cover/fallguys.png");
+}
+
+.gameOv__godOfWar {
+  background-image: url("../../imgs/cover/god-of-war 1.png");
+}
+
+.gameOv__cyberpunk2077 {
+  background-image: url("../../imgs/cover/cyberpunk.png");
+}
+
+.gameOv__ghostwire {
+  background-image: url("../../imgs/cover/GhostWire-Tokyo 1.png");
 }
 
 .free__games h3 {
@@ -344,7 +498,6 @@ main .ul__sessions a {
 .free__games .list__games {
   display: flex;
   gap: 32px;
-  justify-content: space-between;
 }
 .free__games .list__games .description_small,
 .free__games .list__games .description_large {
@@ -357,23 +510,25 @@ main .ul__sessions a {
   border-radius: 4px;
   overflow: hidden;
   background-color: #1b2838;
+  flex-grow: 1;
 }
 .free__games .games__free {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 32px;
 }
 .free__games .games__free .offer__day {
-  width: 100%;
-  height: 21.7rem;
+  min-width: 35.2rem;
+  min-height: 21.7rem;
 }
 .free__games .games__free .description_small {
+  display: flex;
+  justify-content: space-between;
   padding: 1.5rem;
 }
 .free__games .games__free .title {
   text-transform: capitalize;
   font-size: 18px;
-  margin-right: 7rem;
 }
 .free__games .games__free p {
   font-size: 14px;
@@ -389,7 +544,8 @@ main .ul__sessions a {
 }
 .free__games .game_large {
   width: 40rem;
-  height: 46.6rem;
+  height: 47.6rem;
+  min-height: 466px;
 }
 .free__games .game_large .description_large {
   padding: 3.2rem;
@@ -443,10 +599,88 @@ footer {
 
 @media screen and (min-width: 2500px) {
   html {
-    font-size: 80%;
+    font-size: 70%;
   }
   main {
-    padding: 10rem 20%;
+    max-width: 1506px;
+  }
+  .banner {
+    background-position: top !important;
+  }
+}
+@media screen and (max-width: 1365px) {
+  main .list__pages {
+    flex-direction: column;
+    place-items: center;
+  }
+  main .list__pages li a::after {
+    content: "";
+    background-color: transparent;
+  }
+  main .initial__catalog {
+    flex-wrap: wrap;
+  }
+  main .list__games {
+    flex-wrap: wrap;
+  }
+  main .list__games .game_large,
+  main .list__games .games__free {
+    flex-grow: 1;
+  }
+  main .small__bg {
+    position: relative;
+    height: 26rem !important;
+    background-position: top !important;
+  }
+  .banner .content {
+    width: auto;
+  }
+}
+@media screen and (max-width: 920px) {
+  .nav__desktop {
+    display: none;
+  }
+  .nav__mobile {
+    display: flex;
+    position: relative;
+  }
+  .nav__mobile .nav__links {
+    display: none;
+  }
+  .nav__mobile .nav__links.open {
+    display: flex;
+    position: absolute;
+    text-align: center;
+    flex-direction: column;
+    background-color: #1b2838;
+    border-radius: 5px;
+    padding: 1.5rem 3.4rem;
+    top: 7.5rem;
+    right: 0;
+    justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 528px) {
+  html {
+    font-size: 50%;
+  }
+  p,
+  li,
+  .button {
+    font-size: 14px;
+  }
+  .banner .content {
+    margin: 14rem auto;
+  }
+  .banner .content .banner__description {
+    width: auto;
+  }
+  .icons {
+    gap: 1.6rem !important;
+    margin: 0 auto;
+  }
+  .icons img {
+    width: 25%;
   }
 }
 
