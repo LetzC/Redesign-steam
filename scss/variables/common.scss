@@ -73,7 +73,7 @@ li {
   min-height: 4rem;
 }
 .steam__icon::after {
-  content: "";
+  width: 0;
   border: none;
 }
 
